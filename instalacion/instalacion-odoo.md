@@ -50,7 +50,3 @@ docker-compose up -d
 * **Credenciales por defecto:**
 * * **Usuario:** admin
 * * **Contraseña:** admin
-
-## **Creación de la Base de Datos**
-Al acceder por primera vez a la URL desde el navegador, Odoo mostrará una pantalla de configuracióninicial para generar
-la base de datos maestra del sestema. Se deben completar lo sisguentes pasos:
