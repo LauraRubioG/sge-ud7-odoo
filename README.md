@@ -41,7 +41,7 @@ Repositorio de la práctica de **Sistemas de Gestión Empresarial (UD7 - Odoo)**
 * 🧾 [Factura emitida y pagada (PDF)](venta/INV_2026_00001(factura).pdf)
 
 ### 5. Vídeo Demostrativo y Capturas
-* 🎥 [Vídeo demostrativo de la práctica](video/Video_SGE_odoo.mp4)
+* 🎥 [Ver el video en YouTube](https://youtu.be/bw0S0CEg_Zo)
 * 📸 Todas las evidencias visuales (productos, contactos, usuarios y roles) se encuentran organizadas en la carpeta [`capturas/`](capturas/).
 
 ---
