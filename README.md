@@ -42,6 +42,7 @@ Repositorio de la práctica de **Sistemas de Gestión Empresarial (UD7 - Odoo)**
 
 ### 5. Vídeo Demostrativo y Capturas
 * 🎥 [Ver el video en YouTube](https://youtu.be/bw0S0CEg_Zo)
+* Video en dos formatos, para descarga y en un .md para enlace de YouTube
 * 📸 Todas las evidencias visuales (productos, contactos, usuarios y roles) se encuentran organizadas en la carpeta [`capturas/`](capturas/).
 
 ---

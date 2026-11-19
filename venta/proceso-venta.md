@@ -17,21 +17,22 @@ Empecé iniciando sesión con la cuenta de **Laura** (Comercial Junior) para pre
 
 * **Número de presupuesto:** `S00025`
 * **Cliente:** Martín Lector
-* **Condiciones de pago:** Pago inmediato *(ajustar si pusiste otro plazo)*
+* **Condiciones de pago:** Pago en 15 días 
 * **Archivo exportado:** `venta/presupuesto.pdf`
 
 ### Desglose de productos e importes
 
 Añadí las tres líneas de productos almacenables con su 21% de IVA correspondiente:
+Al producto de la Taza Kavárna le añadí un 10% de descuento para ver como se ajustaba en el presupuesto.
 
 | Referencia | Producto | Unidades | Precio Unitario | IVA | Subtotal |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| `KAV-TAZ-01` | Taza de Cerámica Artesanal | 1 | 14,50 € | 21% | 14,50 € |
-| `KAV-TER-01` | Termo Minimalista (Edición Pastel) | 1 | 22,00 € | 21% | 22,00 € |
-| `KAV-FUN-01` | Funda protectora de tela | 1 | 8,00 € | 21% | 8,00 € |
-| | | | **Base Imponible** | | **44,50 €** |
-| | | | **IVA (21%)** | | **9,35 €** |
-| | | | **TOTAL** | | **53,85 €** |
+| `KAV-TAZ-01` | Taza Kavárna | 1 | 13,05 € | 21% | 13,05 € |
+| `KAV-TER-01` | Termo Nómada | 1 | 22,00 € | 21% | 22,00 € |
+| `KAV-FUN-01` | Funda Hojas | 1 | 18,00 € | 21% | 18,00 € |
+| | | | **Base Imponible** | | **53,05 €** |
+| | | | **IVA (21%)** | | **11,14 €** |
+| | | | **TOTAL** | | **64,19 €** |
 
 Una vez revisado que todo cuadraba, guardé el presupuesto y cerré sesión. Como Laura tiene permisos limitados de comercial junior, aquí acaba su parte.
 
@@ -47,9 +48,9 @@ A continuación, entré con la cuenta de **Ander** (Responsable de Ventas e Inve
 
 | Producto | Cantidad Pedida | Cantidad Entregada | Estado en Almacén |
 | :--- | :---: | :---: | :--- |
-| Taza de Cerámica Artesanal | 1 | 1 | Stock descontado |
-| Termo Minimalista (Edición Pastel) | 1 | 1 | Stock descontado |
-| Funda protectora de tela | 1 | 1 | Stock descontado |
+| Taza Kavárna | 1 | 1 | Stock descontado |
+| Termo Nómada | 1 | 1 | Stock descontado |
+| Funda Hojas | 1 | 1 | Stock descontado |
 
 ---
 
@@ -58,8 +59,8 @@ A continuación, entré con la cuenta de **Ander** (Responsable de Ventas e Inve
 Por último, inicié sesión con **Marta** (Administración y Facturación) para cerrar la parte económica de la venta.
 
 1. **Generar la factura:** Accedí al pedido `S00025` (ya entregado) y pulsé en **Crear factura** (factura regular).
-2. **Validar la factura:** Revisé que en el borrador aparecieran los datos fiscales de **Kavárna Concept**, el origen `S00025` y el importe total de **53,85 €**, y pulsé en **Confirmar**. Odoo le asignó la numeración oficial (`INV/2026/00001`).
-3. **Registrar el pago:** Pulsé en **Registrar pago**, seleccioné el diario de **Banco**, confirmé el importe exacto de **53,85 €** y validé el cobro.
+2. **Validar la factura:** Revisé que en el borrador aparecieran los datos fiscales de **Kavárna Concept**, el origen `S00025` y el importe total de **64,19 €**, y pulsé en **Confirmar**. Odoo le asignó la numeración oficial (`INV/2026/00001`).
+3. **Registrar el pago:** Pulsé en **Registrar pago**, seleccioné el diario de **Banco**, confirmé el importe exacto de **64,19 €** y validé el cobro.
 4. **Archivo exportado:** `venta/factura.pdf`
 
 Al terminar, la factura quedó marcada con la etiqueta **Pagado** (importe pendiente: `0,00 €`) y, al volver al pedido `S00025`, su estado de facturación se actualizó automáticamente a **Totalmente facturado**.
@@ -72,9 +73,9 @@ Para comprobar que todo el circuito estaba bien enlazado de principio a fin, ver
 
 | Etapa | Responsable | Documento / Referencia | Estado Final | Comprobación realizada |
 | :--- | :--- | :--- | :--- | :--- |
-| **Presupuesto** | Laura | `S00025` (`venta/presupuesto.pdf`) | Confirmado | Total de 53,85 € con IVA incluido. |
+| **Presupuesto** | Laura | `S00025` (`venta/presupuesto.pdf`) | Confirmado | Total de 64,19 € con IVA incluido. |
 | **Entrega** | Ander | `WH/OUT/00001` | Hecho | Origen `S00025` y stock descontado en inventario. |
-| **Factura** | Marta | `INV/2026/00001` (`venta/factura.pdf`) | Pagado | Mismo importe (53,85 €) y origen `S00025`. |
+| **Factura** | Marta | `INV/2026/00001` (`venta/factura.pdf`) | Pagado | Mismo importe (64,19 €) y origen `S00025`. |
 | **Cobro** | Marta | Pago en diario Banco | Conciliado | Importe pendiente a 0,00 € y pedido "Totalmente facturado". |
 
-Con esto queda comprobado que ningún usuario ha tenido que hacer el proceso entero por su cuenta y que Odoo mantiene toda la trazabilidad conectada entre Ventas, Inventario y Facturación.
+Con esto queda comprobado que ningún usuario ha tenido que hacer el proceso entero por su cuenta y que Odoo mantiene toda la trazabilidad conectada entre Ventas, Inventario y Facturación. Lo podemos además comprobar en el video.
